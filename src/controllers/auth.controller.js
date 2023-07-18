@@ -6,7 +6,7 @@ import { TOKEN_SECRET } from '../config.js';
 
 export const register = async (request, response) => {
   // response.send('register');
-  const { username, email, password } = request.body;
+  const { username, email, password, career } = request.body;
   // console.log(request.body);
 
   try {
@@ -20,6 +20,7 @@ export const register = async (request, response) => {
       username,
       email,
       password: passwordHash,
+      career,
     });
     // Cuando creamos el usuario se debe encriptar tambien la contraseña
     const userSaved = await newUser.save();
@@ -30,6 +31,7 @@ export const register = async (request, response) => {
       id: userSaved._id,
       username: userSaved.username,
       email: userSaved.email,
+      career: userSaved.career,
       createdAt: userSaved.createdAt,
       updatedAt: userSaved.updatedAt,
     });
@@ -41,7 +43,7 @@ export const register = async (request, response) => {
 
 export const login = async (request, response) => {
   // response.send('register');
-  const { email, password } = request.body;
+  const { email, password, career } = request.body;
   // console.log(request.body);
 
   try {
@@ -59,6 +61,7 @@ export const login = async (request, response) => {
       id: userFound._id,
       username: userFound.username,
       email: userFound.email,
+      career: userFound.career,
       createdAt: userFound.createdAt,
       updatedAt: userFound.updatedAt,
     });
@@ -82,6 +85,7 @@ export const profile = async (request, response) => {
     id: userFound._id,
     username: userFound.username,
     email: userFound.email,
+    career: userFound.career,
     createdAt: userFound.createdAt,
     updatedAt: userFound.updatedAt,
   });
@@ -101,6 +105,7 @@ export const verifyToken = async (req, res) => {
       id: userFound._id,
       username: userFound.username,
       email: userFound.email,
+      career: userFound.career,
     });
   });
 };

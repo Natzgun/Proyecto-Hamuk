@@ -14,6 +14,8 @@ import Profile from './routes/Profile';
 import ProtectedRoute from './ProtectedRoute';
 import TasksPage from './routes/TasksPage';
 import { useAuth } from './context/AuthContext';
+import Scholarships from './pages/Scholarships';
+import Jobs from './pages/Jobs';
 
 function App() {
   const { isAuthenticated } = useAuth();
@@ -27,6 +29,8 @@ function App() {
             <Route path='/add-task' element={<TaskFormPage />} />
             <Route path='/tasks/:id' element={<TaskFormPage />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/scholarships' element={<Scholarships/>} />
+            <Route path='/jobs' element={<Jobs/>} />
           </Route>
 
           <Route path='/' element={<HomePage />} />

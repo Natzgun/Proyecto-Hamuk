@@ -18,6 +18,11 @@ export const registerSchema = z.object({
     .min(6, {
       message: 'Password must be at least 6 characters',
     }),
+  career: z
+    .string({
+      required_error: 'Carrera es opcional',
+    })
+    .optional(),
 });
 
 export const loginSchema = z.object({
@@ -28,7 +33,7 @@ export const loginSchema = z.object({
     .email({
       message: 'Email invalido',
     }),
-    password: z
+  password: z
     .string({
       required_error: 'Password is required',
     })

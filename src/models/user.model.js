@@ -15,7 +15,12 @@ const userSchema = new mongoose.Schema({
   password: {
     type: "string",
     required: true,
-  }
+  },
+  career: {
+    type: "string",
+    required: false,
+    trim: true,
+  },
 },{
   timestamps: true,
 })

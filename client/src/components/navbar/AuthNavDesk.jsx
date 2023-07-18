@@ -1,6 +1,7 @@
 //import PropTypes from 'prop-types'
 import { useContext } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { GrLogout } from 'react-icons/gr';
 import NavbarMobile from './NavbarMobile';
 import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/logo-ti.png';
@@ -30,8 +31,13 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className='hover:text-green-400'>
-          <NavLink to='/tasks' className='px-3'>
-            Guardados
+          <NavLink to='/scholarships' className='px-3'>
+            Becas
+          </NavLink>
+        </li>
+        <li className='hover:text-green-400'>
+          <NavLink to='/jobs' className='px-3'>
+            Empleos
           </NavLink>
         </li>
         <li className='hover:text-green-400'>
@@ -45,6 +51,11 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className='hover:text-green-400'>
+          <NavLink to='/tasks' className='px-3'>
+            Guardados
+          </NavLink>
+        </li>
+        <li className='hover:text-green-400 flex items-center'>
             <NavLink
               to='/'
               onClick={() => {
@@ -54,6 +65,7 @@ const Navbar = () => {
             >
               Cerrar Sesión
             </NavLink>
+            <GrLogout/>
         </li>
       </ul>
       {/* Hamburguer menu */}

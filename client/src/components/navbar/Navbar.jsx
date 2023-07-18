@@ -27,16 +27,7 @@ const Navbar = () => {
             Inicio
           </NavLink>
         </li>
-        <li className="hover:text-green-400">
-          <NavLink to="/login" className="px-3">
-            Login
-          </NavLink>
-        </li>
-        <li className="hover:text-green-400">
-          <NavLink to="/register" className="px-3">
-            Registro
-          </NavLink>
-        </li>
+        
         <li className="hover:text-green-400">
           <NavLink to="/about" className="px-3">
             About
@@ -50,6 +41,16 @@ const Navbar = () => {
         <li className="hover:text-green-400">
           <NavLink to="/Contact" className="px-3">
             Contact
+          </NavLink>
+        </li>
+        <li className="hover:text-green-400 font-bold border-2 font-bol border-green-400 rounded-md">
+          <NavLink to="/login" className="px-3">
+            Login
+          </NavLink>
+        </li>
+        <li className="hover:text-green-400 border-2 rounded-md">
+          <NavLink to="/register" className="px-3">
+            Registro
           </NavLink>
         </li>
       </ul>

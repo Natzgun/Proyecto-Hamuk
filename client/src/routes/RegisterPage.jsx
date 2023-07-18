@@ -22,8 +22,8 @@ const RegisterPage = () => {
     signup(values);
   });
   return (
-    <div className='flex h-[calc(100vh)] items-center justify-center bg-slate-800 text-gray-300'>
-      <div className='bg-white max-w-md w-full p-10 rounded-md'>
+    <div className='flex h-[calc(100vh)] items-center justify-center bg-slate-50 text-gray-300'>
+      <div className='bg-white max-w-md w-full p-10 rounded-lg shadow-xl'>
         <h2 className='text-3xl mb-3 text-slate-500 font-bold'>Registro</h2>
         {registerErrors.map((error, i) => (
           <div className='bg-red-500 p-2' key={i}>
@@ -34,7 +34,7 @@ const RegisterPage = () => {
           <input
             type='text'
             {...register('username', { required: true })}
-            className='w-full bg-slate-500 text-white px-4 py-2 rounded-sm my-2'
+            className='w-full bg-slate-100 text-black px-4 py-2 rounded-lg my-2'
             placeholder='Usuario'
           ></input>
           {errors.username && (
@@ -44,22 +44,29 @@ const RegisterPage = () => {
           <input
             type='email'
             {...register('email', { required: true })}
-            className='w-full bg-slate-500 text-white px-4 py-2 rounded-sm my-2'
+            className='w-full bg-slate-100 text-black px-4 py-2 rounded-lg my-2'
             placeholder='Correo'
           ></input>
           {errors.email && <p className='text-red-500'>Email es requerido</p>}
 
           <input
+            type='text'
+            {...register('career', { required: false })}
+            className='w-full bg-slate-100 text-black px-4 py-2 rounded-lg my-2'
+            placeholder='Carrera'
+          ></input>
+          {errors.career && <p className='text-yellow-300'>La carrera es opcional</p>}
+
+          <input
             type='password'
             {...register('password', { required: true })}
-            className='w-full bg-slate-500 text-white px-4 py-2 rounded-sm my-2'
+            className='w-full bg-slate-100 text-black px-4 py-2 rounded-lg my-2'
             placeholder='Contraseña'
           ></input>
           {errors.password && (
             <p className='text-red-500'>Contraseña es requerida</p>
           )}
-
-          <button type='submit' className=''>
+          <button type='submit' className='rounded-md text-green-50 px-6 py-3 my-2 flex items-center bg-green-500 hover:bg-green-600'>
             Registrarse
           </button>
         </form>

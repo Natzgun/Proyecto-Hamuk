@@ -2,6 +2,7 @@ import { useAuth } from "../context/AuthContext";
 
 const Profile = () => {
   const { user } = useAuth();
+  console.log(user);
   return (
     <div
       data-name='profile'
@@ -11,6 +12,7 @@ const Profile = () => {
         <h2 className='text-5xl mb-3 text-center text-slate-500'>Perfil</h2>
         <p className="text-slate-600 text-2xl">Nombre de usuario: {user.username}</p>
         <p className="text-slate-600 text-2xl">Correo: {user.email}</p>
+        <p className="text-slate-600 text-2xl">Carrera: {user.career}</p>
       </div>
     </div>
   );
