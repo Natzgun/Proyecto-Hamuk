@@ -9,11 +9,11 @@ const RegisterPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { isAuthenticated, signup, errors: registerErrors } = useAuth();
+  const { isAuthenticated, signup, user, errors: registerErrors } = useAuth();
   const navigation = useNavigate();
 
   useEffect(() => {
-    if (isAuthenticated) {
+    if (isAuthenticated && user.email !== 'eladmin@gmail.com') {
       navigation('/tasks');
     }
   }, [isAuthenticated]);

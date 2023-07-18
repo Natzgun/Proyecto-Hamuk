@@ -27,20 +27,19 @@ const Navbar = () => {
             Inicio
           </NavLink>
         </li>
-        
+        <li className="hover:text-green-400">
+          <NavLink to="/scholarships" className="px-3">
+            Becas
+          </NavLink>
+        </li>
+        <li className="hover:text-green-400">
+          <NavLink to="/jobs" className="px-3">
+            Laboral
+          </NavLink>
+        </li>
         <li className="hover:text-green-400">
           <NavLink to="/about" className="px-3">
             About
-          </NavLink>
-        </li>
-        <li className="hover:text-green-400">
-          <NavLink to="/Experience" className="px-3">
-            Experience
-          </NavLink>
-        </li>
-        <li className="hover:text-green-400">
-          <NavLink to="/Contact" className="px-3">
-            Contact
           </NavLink>
         </li>
         <li className="hover:text-green-400 font-bold border-2 font-bol border-green-400 rounded-md">

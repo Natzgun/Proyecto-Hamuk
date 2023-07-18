@@ -9,13 +9,15 @@ const LoginPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { isAuthenticated, signin, errors: signinErrors } = useAuth();
+  const { isAuthenticated, signin, user, errors: signinErrors } = useAuth();
 
   const navigation = useNavigate();
 
   useEffect(() => {
-    if (isAuthenticated) {
+    if (isAuthenticated && user.email !== 'eladmin@gmail.com') {
       navigation('/tasks');
+    } else if (isAuthenticated && user.email == 'eladmin@gmail.com') { 
+      navigation('/becas');
     }
   }, [isAuthenticated]);
 

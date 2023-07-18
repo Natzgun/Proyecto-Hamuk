@@ -4,6 +4,7 @@ import morgan from "morgan"; // Con esto vigilamos las peticiones que llegan al 
 import cookieParser from "cookie-parser"; // Para poder leer las cookies
 import authRoutes from "./routes/auth.routes.js";
 import taskRoutes from "./routes/tasks.routes.js";
+import becasRoutes from "./routes/becas.routes.js"
 
 const app = express();
 app.use(cors({
@@ -16,5 +17,6 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/api',authRoutes);
-app.use('/api', taskRoutes)
+app.use('/api', taskRoutes);
+app.use('/api', becasRoutes);
 export default app;
