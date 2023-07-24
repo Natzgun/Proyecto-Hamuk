@@ -8,21 +8,29 @@ const Profile = () => {
       data-name='profile'
       className='flex flex-col h-[calc(100vh)] items-center justify-center bg-white text-gray-300'
     >
-      <div className='bg-slate-100 shadow-lg max-w-md w-full p-10'>
-      <div>
+      <div className='bg-slate-100 shadow-lg max-w-md w-full p-4'>
+      <div className='rounded-lg shadow-lg'>
+        <h2 className='text-3xl text-center mb-3 text-slate-700 font-bold'>Perfil</h2>
         <img
-          className=''
+          className='rounded-t-lg'
           src='https://unab.edu.pe/nueva-web/wp-content/uploads/2022/05/280366694_535258778158195_6699245807989852168_n.jpg'
           alt=''
         />
+        <div className='p-5'>
+          <h2 className='text-2xl text-slate-700 mb-3 font-bold'>
+            Nombre de usuario: <span className='font-normal'>{user.username}</span>
+          </h2>
+          <p className='text-slate-600 text-2xl font-bold mb-2'>
+            Correo: <span className='font-normal'>{user.email}</span>
+          </p>
+          <p className='text-slate-600 text-2xl font-bold'>
+            Carrera: <span className='font-normal'>{user.career}</span>
+          </p>
+        </div>
       </div>
-        <h2 className='text-5xl mb-3 text-center text-slate-500'>Perfil</h2>
-        <p className='text-slate-600 text-2xl'>
-          Nombre de usuario: {user.username}
-        </p>
-        <p className='text-slate-600 text-2xl'>Correo: {user.email}</p>
-        <p className='text-slate-600 text-2xl'>Carrera: {user.career}</p>
       </div>
+
+      
     </div>
   );
 };
