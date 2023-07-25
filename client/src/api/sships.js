@@ -4,8 +4,8 @@ export const getBecasRequest = () => axios.get("/becas");
 
 export const createBecaRequest = (beca) => axios.post("/becas", beca);
 
-export const updateBecaRequest = (beca) =>
-  axios.put(`/becas/${task._id}`, beca);
+export const updateBecaRequest = (id,beca) =>
+  axios.put(`/beca/${id}`, beca);
 
 export const deleteBecaRequest = (id) => axios.delete(`/becas/${id}`);
 

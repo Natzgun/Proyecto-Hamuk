@@ -21,6 +21,6 @@ router.post(
   createBeca
 );
 router.delete('/becas/:id', authRequired, deleteBeca);
-router.put('/becas/:id', authRequired, updateBeca);
+router.put('/beca/:id', authRequired, updateBeca);
 
 export default router;
