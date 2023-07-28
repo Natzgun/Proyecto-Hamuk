@@ -12,7 +12,7 @@ const NavbarMobile = () => {
       className={
         !open
           ? "hidden"
-          : "bg-[#0a192f] absolute top-0 left-0 w-full h-screen items-center flex flex-col justify-center"
+          : "bg-[#0a192f] absolute top-0 left-0 w-full h-screen items-center flex flex-col justify-center text-gray-100"
       }
       onClick={() => toggleClick()}
     >
@@ -20,7 +20,7 @@ const NavbarMobile = () => {
         <NavLink to="/">Inicio</NavLink>
       </li>
       <li className="py-5 text-3xl hover:text-green-400">
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/scholarships">Becas</NavLink>
       </li>
       <li className="py-5 text-3xl hover:text-green-400">
         <NavLink to="/Experience">Experience</NavLink>

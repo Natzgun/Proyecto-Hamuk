@@ -7,6 +7,7 @@ dayjs.extend(utc);
 
 const ScholarshipPage = () => {
   const { getBecas, becas, eliminarBeca } = useSships();
+  console.log(becas)
 
   useEffect(() => {
     getBecas();
@@ -19,7 +20,8 @@ const ScholarshipPage = () => {
           <div key={beca._id} className='rounded-lg shadow-lg flex flex-col justify-between'>
             <img
               className='rounded-t-lg'
-              src='https://unab.edu.pe/nueva-web/wp-content/uploads/2022/05/280366694_535258778158195_6699245807989852168_n.jpg'
+              /* src='https://unab.edu.pe/nueva-web/wp-content/uploads/2022/05/280366694_535258778158195_6699245807989852168_n.jpg' */
+              src={beca.image}
               alt=''
             />
             <div className='p-5'>

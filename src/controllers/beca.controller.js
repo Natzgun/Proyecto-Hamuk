@@ -11,12 +11,13 @@ export const getBecas = async (request, response) => {
 
 export const createBeca = async (request, response) => {
   try {
-    const { title, description, date } = request.body;
+    const { title, description, date, image } = request.body;
   //console.log(request.user);
   const newTask = new Task({
     title,
     description,
     date,
+    image,
     user: request.user.id,
   });
   const savedTask = await newTask.save();

@@ -7,7 +7,7 @@ const BecaCard = ({ beca }) => {
     <div className='rounded-lg shadow-lg'>
       <img
         className='rounded-t-lg'
-        src='https://unab.edu.pe/nueva-web/wp-content/uploads/2022/05/280366694_535258778158195_6699245807989852168_n.jpg'
+        src={beca.image}
         alt=''
       />
       <div className='p-5'>

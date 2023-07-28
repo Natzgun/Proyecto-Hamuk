@@ -16,7 +16,7 @@ const Navbar = () => {
   //console.log(toggleClick);
 
   return (
-    <nav className='bg-green-500 shadow-md fixed w-full flex justify-between items-center px-4 h-[65px] text-slate-700'>
+    <nav className='bg-green-500 shadow-md fixed w-full flex justify-between items-center px-4 h-[65px] text-white'>
       <div>
         <img
           src={Logo}
@@ -25,37 +25,37 @@ const Navbar = () => {
         />
       </div>
       <ul className='md:flex hidden gap-4'>
-        <li className='hover:text-white'>
+        <li className='hover:text-slate-700'>
           <NavLink to='/' className='px-3'>
             Inicio
           </NavLink>
         </li>
-        <li className='hover:text-white'>
-          <NavLink to='/scholarships' className='px-3'>
+        <li className='hover:text-slate-700'>
+          <NavLink to='/becas' className='px-3'>
             Becas
           </NavLink>
         </li>
-        <li className='hover:text-white'>
+        {/* <li className='hover:text-white'>
           <NavLink to='/jobs' className='px-3'>
             Empleos
           </NavLink>
-        </li>
-        <li className='hover:text-white'>
+        </li> */}
+        <li className='hover:text-slate-700'>
           <NavLink to='/add-beca' className='px-3'>
             Agregar
           </NavLink>
         </li>
-        <li className='hover:text-white'>
+        <li className='hover:text-slate-700'>
           <NavLink to='/profile' className='px-3'>
             Perfil
           </NavLink>
         </li>
-        <li className='hover:text-white'>
+        {/* <li className='hover:text-white'>
           <NavLink to='/becas' className='px-3'>
             Guardados
           </NavLink>
-        </li>
-        <li className='hover:text-white flex items-center'>
+        </li> */}
+        <li className='hover:text-slate-700 flex items-center'>
             <NavLink
               to='/'
               onClick={() => {

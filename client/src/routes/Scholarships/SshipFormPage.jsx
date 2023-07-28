@@ -49,7 +49,7 @@ const SshipFormPage = () => {
       data-name='login'
       className='flex h-[calc(100vh)] items-center justify-center bg-white text-gray-300'
     >
-      <div className='bg-slate-900 max-w-md w-full p-10 rounded-lg'>
+      <div className='bg-slate-900 max-w-md w-full p-10 rounded-lg mt-14'>
         <h2 className='text-3xl mb-3 text-slate-500'>Formulario beca</h2>
         <form onSubmit={onSubmitReg}>
           <label htmlFor='title'>Titulo</label>
@@ -72,6 +72,14 @@ const SshipFormPage = () => {
           {/* {errors.password && (
             <p className='text-red-500'>Contraseña es requerida</p>
           )} */}
+          <label htmlFor='title'>Imagen</label>
+          <input
+            type='text'
+            {...register('image', { required: true })}
+            className='w-full bg-slate-100 text-black px-4 py-2 rounded-lg my-2'
+            placeholder='Url de la imagen'
+            autoFocus
+          ></input>
           <label htmlFor='date'>Fecha</label>
           <input
             type='date'

@@ -32,11 +32,11 @@ const Navbar = () => {
             Becas
           </NavLink>
         </li>
-        <li className="hover:text-green-400">
+        {/* <li className="hover:text-green-400">
           <NavLink to="/jobs" className="px-3">
             Laboral
           </NavLink>
-        </li>
+        </li> */}
         <li className="hover:text-green-400">
           <NavLink to="/about" className="px-3">
             About

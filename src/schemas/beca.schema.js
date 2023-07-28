@@ -7,5 +7,8 @@ export const createBecaSchema = z.object({
   description: z.string({
     required_error: "Description required, must be string",
   }),
+  image: z.string({
+    required_error: "Link of image is required",
+  }),
   date: z.string().datetime().optional(),
 });
