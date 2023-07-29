@@ -22,6 +22,18 @@ const becaSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  country: {
+    type: String,
+    required: true,
+  },
+  continent: {
+    type: String,
+    required: true,
+  },
+  moreInfo: {
+    type: String,
+    required: true,
+  },
 },{
   timestamps: true,
 });

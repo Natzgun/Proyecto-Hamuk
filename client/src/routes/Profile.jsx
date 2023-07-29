@@ -6,10 +6,10 @@ const Profile = () => {
   return (
     <div
       data-name='profile'
-      className='flex flex-col h-[calc(100vh)] items-center justify-center bg-white text-gray-300'
+      className='flex flex-col h-[calc(100vh)] items-center justify-center bg-white text-green-300'
     >
-      <div className='bg-slate-100 shadow-lg max-w-md w-full p-4'>
-      <div className='rounded-lg shadow-lg'>
+      <div className='bg-green-100 shadow-lg max-w-md w-full p-4'>
+      <div className=''>
         <h2 className='text-3xl text-center mb-3 text-slate-700 font-bold'>Perfil</h2>
         <img
           className='rounded-t-lg'

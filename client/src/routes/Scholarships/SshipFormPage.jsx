@@ -23,6 +23,10 @@ const SshipFormPage = () => {
           'date',
           sship.date ? dayjs(sship.date).utc().format('YYYY-MM-DD') : ''
         );
+        setValue('country', sship.country);
+        setValue('continent', sship.continent);
+        setValue('moreInfo', sship.moreInfo);
+        setValue('image', sship.image);
         setValue('completed', sship.completed);
       }
     };
@@ -45,13 +49,14 @@ const SshipFormPage = () => {
   });
 
   return (
-    <div
-      data-name='login'
-      className='flex h-[calc(100vh)] items-center justify-center bg-white text-gray-300'
-    >
-      <div className='bg-slate-900 max-w-md w-full p-10 rounded-lg mt-14'>
-        <h2 className='text-3xl mb-3 text-slate-500'>Formulario beca</h2>
-        <form onSubmit={onSubmitReg}>
+    <div className='container mx-auto py-20 px-8 md:px-16 bg-white text-gray-500'>
+      <h2 className='text-3xl mb-8 text-slate-500 lg:px-12'>Formulario beca</h2>
+
+      <form
+        onSubmit={onSubmitReg}
+        className='bg-white grid md:grid-cols-2 gap-6'
+      >
+        <div className='lg:px-12'>
           <label htmlFor='title'>Titulo</label>
           <input
             type='text'
@@ -72,7 +77,7 @@ const SshipFormPage = () => {
           {/* {errors.password && (
             <p className='text-red-500'>Contraseña es requerida</p>
           )} */}
-          <label htmlFor='title'>Imagen</label>
+          <label htmlFor='image'>Imagen</label>
           <input
             type='text'
             {...register('image', { required: true })}
@@ -86,11 +91,39 @@ const SshipFormPage = () => {
             {...register('date', { required: true })}
             className='w-full bg-slate-100 text-black px-4 py-2 rounded-lg my-2'
           />
+        </div>
+        <div>
+          <label htmlFor='category'>País</label>
+          <input
+            type='text'
+            {...register('country', { required: true })}
+            className='w-full bg-slate-100 text-black px-4 py-2 rounded-lg my-2'
+            placeholder='Escriba aqui el pais'
+            autoFocus
+          ></input>
+
+          <label htmlFor='continent'>Continente</label>
+          <input
+            type='text'
+            {...register('continent', { required: true })}
+            className='w-full bg-slate-100 text-black px-4 py-2 rounded-lg my-2'
+            placeholder='Escriba aqui el continente'
+            autoFocus
+          ></input>
+
+          <label htmlFor='moreInfo'>Informacion externa</label>
+          <input
+            type='text'
+            {...register('moreInfo', { required: true })}
+            className='w-full bg-slate-100 text-black px-4 py-2 rounded-lg my-2'
+            placeholder='Link de la pagina externa'
+            autoFocus
+          ></input>
           <button className='rounded-md text-green-50 px-6 py-3 my-2 flex items-center bg-green-500 hover:bg-green-600'>
             Crear
           </button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 };

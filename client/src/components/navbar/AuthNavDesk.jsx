@@ -35,26 +35,26 @@ const Navbar = () => {
             Becas
           </NavLink>
         </li>
-        <li className='hover:text-green-400'>
+        {/* <li className='hover:text-green-400'>
           <NavLink to='/jobs' className='px-3'>
             Empleos
           </NavLink>
-        </li>
-        <li className='hover:text-green-400'>
+        </li> */}
+        {/* <li className='hover:text-green-400'>
           <NavLink to='/add-task' className='px-3'>
             Agregar
           </NavLink>
-        </li>
+        </li> */}
         <li className='hover:text-green-400'>
           <NavLink to='/profile' className='px-3'>
             Perfil
           </NavLink>
         </li>
-        <li className='hover:text-green-400'>
+        {/* <li className='hover:text-green-400'>
           <NavLink to='/tasks' className='px-3'>
             Guardados
           </NavLink>
-        </li>
+        </li> */}
         <li className='hover:text-green-400 flex items-center'>
             <NavLink
               to='/'
