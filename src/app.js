@@ -5,10 +5,11 @@ import cookieParser from "cookie-parser"; // Para poder leer las cookies
 import authRoutes from "./routes/auth.routes.js";
 import taskRoutes from "./routes/tasks.routes.js";
 import becasRoutes from "./routes/becas.routes.js"
+import { FRONTEND_URL } from "./config.js";
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: FRONTEND_URL,
   credentials: true
 })); // Esto me permite comunicar
 // Morgan dev para que nos muestre las peticiones
