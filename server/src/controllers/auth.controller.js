@@ -60,7 +60,7 @@ export const login = async (request, response) => {
 
     const token = await createAccessToken({ id: userFound._id });
     response.cookie('token', token, {
-      httpOnly: true,
+      httpOnly: false,
       secure: true,
       sameSite: "none",
       expires: new Date(Date.now() + (30*24*3600000)),
