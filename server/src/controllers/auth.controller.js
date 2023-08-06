@@ -63,6 +63,7 @@ export const login = async (request, response) => {
       httpOnly: process.env.NODE_ENV !== "development",
       secure: true,
       sameSite: "none",
+      domain: process.env.NODE_ENV === 'development' ? 'localhost' : '.vercel.app'
     });
     // en esta parte nos va devolver el json pero sin la contraseña
     response.json({
