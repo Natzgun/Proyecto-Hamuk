@@ -15,7 +15,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isAuthenticated && user.email !== 'erickmalcoaccha@gmail.com') {
-      navigation('/becas');
+      navigation('/scholarships');
     } else if (isAuthenticated && user.email == 'erickmalcoaccha@gmail.com') { 
       navigation('/profile');
     }

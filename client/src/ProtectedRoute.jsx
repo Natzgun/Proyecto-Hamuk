@@ -4,7 +4,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 // Outlet devuelve un compoinente si el usuario esta logeado
 const ProtectedRoute = () => {
   const { loading, isAuthenticated } = useAuth();
-  console.log(loading, isAuthenticated);
+  //console.log(loading, isAuthenticated);
   if (loading) {
     return (
       <div

@@ -7,7 +7,7 @@ dayjs.extend(utc);
 
 const ScholarshipPage = () => {
   const { getBecas, becas, eliminarBeca } = useSships();
-  console.log(becas);
+  //console.log(becas);
 
   useEffect(() => {
     getBecas();

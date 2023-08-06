@@ -14,7 +14,7 @@ const RegisterPage = () => {
 
   useEffect(() => {
     if (isAuthenticated && user.email !== 'erickmalcoaccha@gmail.com') {
-      navigation('/becas');
+      navigation('/scholarships');
     }
   }, [isAuthenticated]);
 
