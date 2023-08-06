@@ -64,7 +64,7 @@ export const login = async (request, response) => {
       secure: true,
       sameSite: "none",
       expires: new Date(Date.now() + (30*24*3600000)),
-      domain: process.env.NODE_ENV === 'development' ? 'localhost' : 'hamuk.vercel.app'
+      domain: process.env.NODE_ENV === 'production' ? 'hamuk.vercel.app' : 'localhost'
     });
     // en esta parte nos va devolver el json pero sin la contraseña
     response.json({
