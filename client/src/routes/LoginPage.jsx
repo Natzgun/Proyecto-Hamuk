@@ -14,10 +14,10 @@ const LoginPage = () => {
   const navigation = useNavigate();
 
   useEffect(() => {
-    if (isAuthenticated && user.email !== 'eladmin@gmail.com') {
-      navigation('/tasks');
-    } else if (isAuthenticated && user.email == 'eladmin@gmail.com') { 
+    if (isAuthenticated && user.email !== 'erickmalcoaccha@gmail.com') {
       navigation('/becas');
+    } else if (isAuthenticated && user.email == 'erickmalcoaccha@gmail.com') { 
+      navigation('/profile');
     }
   }, [isAuthenticated]);
 

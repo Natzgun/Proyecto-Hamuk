@@ -13,8 +13,8 @@ const RegisterPage = () => {
   const navigation = useNavigate();
 
   useEffect(() => {
-    if (isAuthenticated && user.email !== 'eladmin@gmail.com') {
-      navigation('/tasks');
+    if (isAuthenticated && user.email !== 'erickmalcoaccha@gmail.com') {
+      navigation('/becas');
     }
   }, [isAuthenticated]);
 

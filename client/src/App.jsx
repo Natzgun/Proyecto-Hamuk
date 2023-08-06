@@ -54,7 +54,7 @@ function App() {
         </Route>
       </>
     );
-  } else if (isAuthenticated && user.email == 'eladmin@gmail.com') {
+  } else if (isAuthenticated && user.email == 'erickmalcoaccha@gmail.com') {
     navbarComponent = <AdminNavbar />;
     routes = (
       <>
