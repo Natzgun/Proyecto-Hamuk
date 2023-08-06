@@ -20,4 +20,7 @@ app.use(cookieParser());
 app.use('/api',authRoutes);
 app.use('/api', taskRoutes);
 app.use('/api', becasRoutes);
+app.use('/', (req, res) => {
+  res.json("Hello World! from vercel");
+});
 export default app;
