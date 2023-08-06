@@ -24,7 +24,7 @@ app.use('/', (req, res) => {
   res.json("Hello World! from vercel");
 });
 app.use('/ping', (req, res) => {
-  res.send('pong 🏓')
+  res.json('pong 🏓');
 })
 
 export default app;
