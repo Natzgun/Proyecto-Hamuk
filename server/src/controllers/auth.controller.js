@@ -26,7 +26,7 @@ export const register = async (request, response) => {
     const userSaved = await newUser.save();
     const token = await createAccessToken({ id: userSaved._id });
     response.cookie('token', token, {
-      httpOnly: process.env.NODE_ENV !== "development",
+      httpOnly: false,
       secure: true,
       sameSite: "none",
     });
