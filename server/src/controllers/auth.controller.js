@@ -60,7 +60,7 @@ export const login = async (request, response) => {
 
     const token = await createAccessToken({ id: userFound._id });
     response.cookie('token', token, {
-      httpOnly: process.env.NODE_ENV !== "development",
+      httpOnly: true,
       secure: true,
       sameSite: "none",
       domain: process.env.NODE_ENV === 'development' ? 'localhost' : 'hamuk-api.vercel.app'
