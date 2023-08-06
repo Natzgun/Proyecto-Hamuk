@@ -63,7 +63,7 @@ export const login = async (request, response) => {
       httpOnly: true,
       secure: true,
       sameSite: "none",
-      domain: process.env.NODE_ENV === 'development' ? 'localhost' : '.hamuk-api.vercel.app'
+      domain: process.env.NODE_ENV === 'development' ? 'localhost' : '.domain.com'
     });
     // en esta parte nos va devolver el json pero sin la contraseña
     response.json({
