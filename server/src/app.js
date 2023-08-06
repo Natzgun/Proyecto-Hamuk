@@ -8,10 +8,7 @@ import becasRoutes from "./routes/becas.routes.js"
 import { FRONTEND_URL } from "./config.js";
 
 const app = express();
-app.use(cors({
-  origin: FRONTEND_URL,
-  credentials: true
-})); // Esto me permite comunicar
+app.use(cors()); // Esto me permite comunicar
 // Morgan dev para que nos muestre las peticiones
 app.use(morgan('dev'));
 // Midleware para convertir request bady en JSON
@@ -21,7 +18,7 @@ app.use('/api',authRoutes);
 app.use('/api', taskRoutes);
 app.use('/api', becasRoutes);
 app.use('/', (req, res) => {
-  res.json("Hello World! from vercel");
+  res.json("From Vercel");
 });
 app.use('/ping', (req, res) => {
   res.json('pong 🏓');
