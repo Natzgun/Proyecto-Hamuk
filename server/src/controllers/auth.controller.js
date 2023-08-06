@@ -25,7 +25,11 @@ export const register = async (request, response) => {
     // Cuando creamos el usuario se debe encriptar tambien la contraseña
     const userSaved = await newUser.save();
     const token = await createAccessToken({ id: userSaved._id });
-    response.cookie('token', token);
+    response.cookie('token', token, {
+      httpOnly: process.env.NODE_ENV !== "development",
+      secure: true,
+      sameSite: "none",
+    });
     // en esta parte nos va devolver el json pero sin la contraseña
     response.json({
       id: userSaved._id,

@@ -22,11 +22,20 @@ const NavbarMobile = () => {
       <li className="py-5 text-3xl hover:text-green-400">
         <NavLink to="/scholarships">Becas</NavLink>
       </li>
-      <li className="py-5 text-3xl hover:text-green-400">
+      {/* <li className="py-5 text-3xl hover:text-green-400">
         <NavLink to="/Experience">Experience</NavLink>
       </li>
       <li className="py-5 text-3xl hover:text-green-400">
         <NavLink to="/Contact">Contact</NavLink>
+      </li> */}
+      <li className="py-5 text-3xl hover:text-green-400">
+        <NavLink to="/login">Iniciar Sesión</NavLink>
+      </li>
+      <li className="py-5 text-3xl hover:text-green-400">
+        <NavLink to="/register">Registrate</NavLink>
+      </li>
+      <li className="py-5 text-3xl hover:text-green-400">
+        <NavLink to="/about">Acerca de Hamuk</NavLink>
       </li>
     </ul>
   );
