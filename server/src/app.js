@@ -23,7 +23,7 @@ app.use('/api', becasRoutes);
 app.use('/', (req, res) => {
   res.json("Hello World! from vercel");
 });
-app.get('/ping', (req, res) => {
+app.use('/ping', (req, res) => {
   res.send('pong 🏓')
 })
 
