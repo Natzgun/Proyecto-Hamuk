@@ -5,3 +5,4 @@ import { PORT } from "./src/config.js";
 connectDB();
 app.listen(PORT);
 console.log("Server on port", PORT);
+console.log(`Environment: ${process.env.NODE_ENV}`)

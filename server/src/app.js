@@ -10,7 +10,7 @@ import { FRONTEND_URL } from "./config.js";
 const app = express();
 app.use(cors({
   origin: FRONTEND_URL,
-  credentials: true
+  credentials: true,
 })); // Esto me permite comunicar
 // Morgan dev para que nos muestre las peticiones
 app.use(morgan('dev'));
@@ -23,5 +23,16 @@ app.use('/api', becasRoutes);
 app.use('/', (req, res) => {
   res.json("From Vercel");
 });
+
+if (process.env.NODE_ENV === "production") {
+  const path = await import("path");
+  app.use(express.static("client/dist"));
+
+  app.get("*", (req, res) => {
+    console.log(path.resolve("client", "dist", "index.html") );
+    res.sendFile(path.resolve("client", "dist", "index.html"));
+  });
+}
+
 
 export default app;

@@ -59,7 +59,11 @@ export const login = async (request, response) => {
       return response.status(404).json({ message: 'Incorrect password' });
 
     const token = await createAccessToken({ id: userFound._id });
-    response.cookie('token', token);
+    response.cookie('token', token, {
+      httpOnly: process.env.NODE_ENV !== "development",
+      secure: true,
+      sameSite: "none",
+    });
     // en esta parte nos va devolver el json pero sin la contraseña
     response.json({
       id: userFound._id,
