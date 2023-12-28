@@ -1,0 +1,102 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hola",
+        "Oye",
+        "¿Cómo estás?",
+        "¿Hay alguien ahí?",
+        "Hola",
+        "Buen día"
+      ],
+      "responses": [
+        "¡Hola! Querido estudiante",
+        "Hola, gracias por visitar",
+        "Hola, ¿en qué puedo ayudarte?",
+        "Hola, ¿cómo puedo ayudarte?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Adiós",
+        "Hasta luego",
+        "Adiós"
+      ],
+      "responses": [
+        "Hasta luego, gracias por visitar",
+        "Que tengas un buen día",
+        "¡Adiós! Vuelve pronto."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Gracias",
+        "Gracias",
+        "Eso es útil",
+        "¡Muchas gracias!"
+      ],
+      "responses": [
+        "¡Feliz de ayudar!",
+        "En cualquier momento",
+        "Es un placer"
+      ]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": [
+        "¿Qué becas tienes?",
+        "¿Qué tipos de becas hay?",
+        "¿Qué becas ofreces?",
+        "Que otras becas mas ofreces?"
+      ],
+      "responses": [
+        "Becas de universidad",
+        "Becas para hacer maestrias",
+        "Tenemos becas escolares y universidades"
+      ]
+    },
+    {
+      "tag": "eligibility",
+      "patterns": [
+        "¿Soy elegible para becas?",
+        "¿Quién califica para becas?",
+        "¿Cuáles son los criterios de elegibilidad para becas?"
+      ],
+      "responses": [
+        "La elegibilidad para becas varía, pero a menudo depende de factores como el rendimiento académico, la necesidad financiera y las actividades extracurriculares.",
+        "Los estudiantes con sólidos expedientes académicos y participación activa en actividades extracurriculares a menudo son elegibles para becas.",
+        "Consulte con los proveedores de becas para conocer los criterios de elegibilidad específicos."
+      ]
+    },
+    {
+      "tag": "application",
+      "patterns": [
+        "¿Cómo solicito becas?",
+        "¿Cuál es el proceso de solicitud de becas?",
+        "¿Puedes guiarme a través de la solicitud de becas?"
+      ],
+      "responses": [
+        "Revisa la informacion especifica en las paginas oficiales",
+        "El proceso de solicitud de becas puede implicar enviar un formulario de solicitud, transcripciones académicas, cartas de recomendación y una declaración personal.",
+        "Comienza investigando becas y sigue cuidadosamente las instrucciones proporcionadas por los proveedores de becas para el proceso de solicitud.",
+        "Si necesitas ayuda, considera comunicarte con el consejero de orientación de tu escuela o utiliza recursos en línea para obtener orientación.",
+        "Accede a la beca que te interesa en nuestra pagina y dale en ver mas informacion."
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "¡Cuéntame un chiste!",
+        "¡Dime algo divertido!",
+        "¿Conoces un chiste?"
+      ],
+      "responses": [
+        "¿Por qué el hipster se quemó la boca? Tomó el café antes de que estuviera frío.",
+        "¿Qué dijo el bisonte cuando su hijo se fue a la universidad? Bison."
+      ]
+    }
+  ]
+}
