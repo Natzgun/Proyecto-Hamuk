@@ -20,28 +20,28 @@ const About = () => {
     }
   };
   return (
-    <div data-name="about" className="w-full h-screen bg-white text-gray-300">
+    <div className="pb-12">
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <h2 className="text-7xl mb-3 text-slate-500">ChatGepeto</h2>
-        {/* <img */}
-        {/*   src="https://i.ytimg.com/vi/ZL5b4uPicp0/maxresdefault.jpg" */}
-        {/*   alt="" */}
-        {/*   className="h-[400px]" */}
-        {/* /> */}
-        <section className="bg-slate-700 p-4">
-          <div className="mt-4 p-2 bg-gray-500 text-white">
-            <label>ChatGepeto:</label>
-            <div>{botResponse}</div>
+        <h2 className="text-4xl mb-3 text-white font-semibold">ChatGepeto</h2>
+        <section className="w-102 bg-blue-300 p-4 rounded-lg shadow-md" >
+          <div className="mb-4 p-2 h-40 bg-blue-100 text-gray-800 rounded-lg ">
+            <label className="text-sm text-black"></label>
+            <div className="text-sm border-black">{botResponse}</div>
           </div>
-          <div className="p-2">
-            <label>Usuario:</label>
+          <div className="flex items-center">
+            <label className="text-sm text-black">Usuario:</label>
             <input
               type="text"
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
-              className="mr-2 ml-2 p-2 text-black"
+              className="flex-grow ml-2 p-2 border rounded-md focus:outline-none focus:border-blue-500 border-black"
             />
-            <button onClick={sendMessage}>Enviar</button>
+            <button
+              onClick={sendMessage}
+              className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-md focus:outline-none hover:bg-blue-600"
+            >
+              Consultar
+            </button>
           </div>
         </section>
       </div>

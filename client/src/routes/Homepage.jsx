@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div>
       <Welcome />
-      <About />
+      {/* <About /> */}
     </div>
   );
 };

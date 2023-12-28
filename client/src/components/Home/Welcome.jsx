@@ -1,3 +1,4 @@
+import About from '../../routes/About';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import backgroundImage from '../../img/hamuk.webp';
 
@@ -34,6 +35,10 @@ const Welcome = () => {
           </button>
         </div>
         {/*<div className="bg-slate-300 hidden sm:block">logo personal</div>*/}
+        <div className='flex justify-end'>
+          <About style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 10 }} />
+
+        </div>
       </div>
     </section>
   );
